@@ -4,9 +4,9 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @ConfigurationProperties("alea.poke-api")
 public class ServiceProperties {
-  private RequestProperties request;
+  private TopProperties top;
 
-  public static class RequestProperties {
+  public static class TopProperties {
     private int limit;
   }
 }

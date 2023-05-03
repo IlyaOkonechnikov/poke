@@ -1,4 +1,4 @@
-package com.alea.pokeapi.dto;
+package com.alea.pokeapi.data;
 
 import lombok.Data;
 

@@ -1,6 +1,6 @@
 package com.alea.pokeapi.web.controller;
 
-import com.alea.pokeapi.dto.PokemonDto;
+import com.alea.pokeapi.data.PokemonDto;
 import com.alea.pokeapi.service.PokeApiService;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,7 +19,7 @@ public class PokemonController {
   private final PokeApiService service;
 
   @GetMapping("/pokemons/heaviest")
-  public List<PokemonDto> getHeaviestPokemons() {
-    return service.getHeaviestPokemons();
+  public List<PokemonDto> getTopPokemons() {
+    return service.getTopPokemons();
   }
 }
