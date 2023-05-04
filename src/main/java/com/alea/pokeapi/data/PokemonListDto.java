@@ -1,12 +1,11 @@
 package com.alea.pokeapi.data;
 
-import java.util.List;
-
 import lombok.Data;
+
+import java.util.List;
 
 @Data
 public class PokemonListDto {
   private int count;
-  private String next;
   private List<PokemonResultDto> results;
 }

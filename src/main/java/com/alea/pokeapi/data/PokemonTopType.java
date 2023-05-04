@@ -7,7 +7,7 @@ public enum PokemonTopType {
 
     HEAVIEST(() -> Comparator.comparingInt(PokemonDto::getWeight).reversed()),
     HIGHEST(() -> Comparator.comparingInt(PokemonDto::getHeight).reversed()),
-    EXPERIENCED(() -> Comparator.comparingLong(PokemonDto::getBaseExperience).reversed());
+    EXPERIENCED(() -> Comparator.comparingInt(PokemonDto::getBaseExperience).reversed());
 
     private final Supplier<Comparator<PokemonDto>> comparatorSupplier;
 

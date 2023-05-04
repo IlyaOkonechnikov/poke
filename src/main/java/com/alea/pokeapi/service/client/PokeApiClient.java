@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 )
 public interface PokeApiClient {
 
-  @GetMapping("/api/v2/pokemon")
+  @GetMapping("/pokemon")
   PokemonListDto getAll(@RequestParam int limit, @RequestParam int offset);
 
-  @GetMapping("/api/v2/pokemon/{id}")
+  @GetMapping("/pokemon/{id}")
   PokemonDto getPokemonById(@PathVariable("id") int id);
 }

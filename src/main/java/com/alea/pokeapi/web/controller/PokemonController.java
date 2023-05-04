@@ -1,15 +1,15 @@
 package com.alea.pokeapi.web.controller;
 
 import com.alea.pokeapi.data.PokemonDto;
+import com.alea.pokeapi.data.PokemonTopType;
 import com.alea.pokeapi.service.PokeApiService;
-
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-
-import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequiredArgsConstructor
@@ -18,8 +18,8 @@ public class PokemonController {
 
   private final PokeApiService service;
 
-  @GetMapping("/pokemons/heaviest")
-  public List<PokemonDto> getTopPokemons() {
-    return service.getTopPokemons();
+  @GetMapping("/top")
+  public List<PokemonDto> getTopPokemons(@RequestParam PokemonTopType topType) {
+    return service.getTopPokemons(topType);
   }
 }
