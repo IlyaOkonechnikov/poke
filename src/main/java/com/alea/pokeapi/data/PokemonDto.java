@@ -1,11 +1,15 @@
 package com.alea.pokeapi.data;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 
 @Data
+@Builder
+@AllArgsConstructor
 public class PokemonDto {
-  private Long id;
+  private int id;
   private String name;
   @JsonProperty("base_experience")
   private int baseExperience;

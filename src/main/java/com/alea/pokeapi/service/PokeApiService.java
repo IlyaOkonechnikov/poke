@@ -49,7 +49,7 @@ public class PokeApiService {
         return topPokemons;
     }
 
-    public List<Integer> getAllPokemonIds() {
+    private List<Integer> getAllPokemonIds() {
         log.debug("Getting all pokemon ids");
         final int pokemonsCount = client.getAll(0, 0).getCount();
         List<Integer> allPokemonIds = client.getAll(pokemonsCount, 0).getResults()
@@ -63,6 +63,6 @@ public class PokeApiService {
     @Scheduled(fixedRateString ="${spring.cache.ttl}")
     @CacheEvict(value = "${spring.cache.name}", allEntries = true)
     public void evictCache() {
-        log.debug("Evicting the cache");
+        log.debug("Evicting the cache.");
     }
 }
