@@ -14,7 +14,7 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/rpc/v1/pokemons")
-public class PokemonController {
+public class PokeApiController {
 
   private final PokeApiService service;
 

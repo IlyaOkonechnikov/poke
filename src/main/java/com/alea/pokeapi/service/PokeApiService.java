@@ -51,7 +51,7 @@ public class PokeApiService {
 
     private List<Integer> getAllPokemonIds() {
         log.debug("Getting all pokemon ids");
-        final int pokemonsCount = client.getAll(0, 0).getCount();
+        int pokemonsCount = client.getAll(0, 0).getCount();
         List<Integer> allPokemonIds = client.getAll(pokemonsCount, 0).getResults()
                 .stream()
                 .map(result -> Integer.valueOf(result.getUrl().split("/")[6]))
