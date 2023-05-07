@@ -10,7 +10,6 @@ What would I do?
 1. Implement an Open API specification for the project.
 2. Implement security measures to protect the application.
 3. Configure Jacoco for code coverage reporting.
-4. Containerize the application using technologies like Docker.
-5. Build CI/CD pipeline and deploy to AWS
-6. Use more sophisticated cache mechanism
-7. Conduct integration testing to ensure the components of the system work together correctly.
+4. Build CI/CD pipeline for application containerization, running tests and deploying to AWS
+5. Use more sophisticated cache mechanism
+6. Conduct integration testing to ensure the components of the system work together correctly.
